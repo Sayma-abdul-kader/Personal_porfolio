@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+:root{
+    --orange: orangered;
+    --black: rgb(106, 106, 97);
+    --white: #fff;
+    --light-bg: #eee;
+    --border-bold: .5rem solid var(--white);
+    --border-light: .2rem solid var(--white);
+    --border-bg: .8rem ridge var(--white);
+    --turq: rgb(0, 213, 255);
+    --border-b: .5rem ridge rgb(127, 187, 32);
+    --border-l: .5rem solid var(--black);
+ }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Baskerville", serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: ivory;
+}
+
+::before,::after{
+    box-sizing: border-box;
+}
+*::selection{
+    background-color: ivory;
+    color: orangered;
+}
+
+*::-webkit-scrollbar{
+    height:  .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow: hidden;
+    transition: .2s linear !important;
+    background-color:  rgb(8, 8, 27);
+}
+
+body.active{
+    padding-left: 35rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: -35rem;
+    height: 100vh;
+    background-color: rgb(8, 8, 27);
+    border-right: var(--border-bold);
+    width: 35rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+}
+
+.header .log{
+    text-transform: uppercase;
+    font-family: "Sofia", cursive;
+    border-bottom: var(--border-bold);
+    font-weight: bolder;
+    font-size: 4.5rem;
+}
+
+.header .logo{
+    border-radius: 50%;
+    height: 7rem;
+    width: 10rem;
+}
+
+
+.header .navbar{
+    width: 100%;
+}
+
+.header .navbar a{
+    display: block;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    margin: .5rem;
+    text-transform: capitalize;
+}
+
+.header .navbar a.active,
+.header .navbar a:hover{
+    color: rgb(255, 47, 0);
+}
+
+.header .follow a{
+    color: rgb(107, 181, 255);
+    font-size: 3rem;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.header .right{
+    float: right;
+}
+
+.header .follow a:hover{
+    transform: rotate(180deg);
+}
+
+#menu-btn{
+    position: absolute;
+    top: 0; right: -5.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background-color: rgb(106, 106, 97);
+    color: var(--white);
+}
+
+.header.active{
+    left: 0;
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+.home{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.home .image{
+    flex: 1 1 40rem;
+}
+
+.home .image img{
+    height: 70rem;
+    padding: 2rem;
+    border: var(--border-bg);
+}
+
+.home .content{
+    flex: 1 1 40rem;
+}
+
+.home .content h3{
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: .5rem;
+}
+
+.home .content .doe{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgb(244, 243, 236);
+    border-radius: 40%;
+    font: 2.5rem;
+    font-size: 3cqb;
+    margin: 1rem 0;
+    color: var(--orange);
+}
+
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    background: green;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.05);
+    opacity: 1.5;
+}
+
+.home .content p{
+    font-size: 1.9rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+h3 .dec{
+    font-family: 'Clicker Script',cursive;
+    font: 2.5rem;
+    font-weight: 700;
+    color: var(--orange);
+    text-transform: uppercase;
+
+}
+
+/* About */
+section .container{
+    padding-top: 60px ;
+    padding-bottom: 70px;
+    text-align: left;
+}
+
+.title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.title h2{
+    font-size: 40px;
+    color: var(--white);
+    font-weight: 700;
+    position: relative;
+}
+
+.title h2::before{
+    text-align: left;
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--orange);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.title h2::after{
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--orange) ;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+.about .abt{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .abt .about-txt{
+    flex: 0 0 100%;
+    max-width: 100%;
+    font-size: 2rem;
+}
+
+.about .abt .about-txt h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about .abt .about-txt h3 span{
+    color: var(--orange);
+}
+
+.about .abt .about-txt p{
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--white);
+}
+
+.about .abt .personal-info{
+    flex: 0 0 60%;
+    max-width: 100%;
+    padding-top: 5px;
+    padding: 15px;
+    font-size: 16px;
+}
+
+
+.about .abt .personal-info .info-t{
+    flex: 0 0 60%;
+    max-width: 100%;
+    padding-top: 5px;
+    padding: 15px;
+    font-size: 16px;
+}
+
+
+.about .abt .personal-info .info-t p{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid var(--white);
+    color: rgb(0, 213, 255);
+}
+
+.about .abt .personal-info .info-t p span{
+    font-weight: 400;
+    color: ivory;
+}
+
+.about .abt .personal-info .info-t .button{
+    margin-top: 30px;
+}
+
+.about .abt .personal-info .info-t .button btn{
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.about .abt .skills{
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-top: 5px;
+    
+}
+
+.about .abt .skills .skl-it{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .abt .skills .skl-it h5{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgb(0, 213, 255);
+    text-transform: capitalize;
+}
+
+.about .abt .skills .skl-it .prog{
+    background-color: #fff;
+    height: 7px;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+}
+
+.about .abt .skills .skl-it{
+    margin-bottom: 30px;
+}
+
+.about .abt .skills .skl-it .prog .progs{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: orangered;
+}
+
+.about .abt .skills .skl-it .percent{
+    position: absolute;
+    right: 0;
+    color: var(--white);
+    top: -40px;
+    font-weight: 400;
+    line-height: 4px;
+    font-size: 12px;
+}
+
+
+/*Service section*/
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+
+}
+
+.services .heading span{
+    text-align: left;
+    font-size: 10rem;
+    border-bottom: 4px solid #fff;
+    padding: 6px;
+} 
+
+.services .box-container .box{
+    margin-top: 5rem ;
+    padding: 3rem 2rem;
+    border: var(--border-light);
+}
+
+.services .box-container .box i{
+    font-size: 6rem;
+    margin-bottom: .5rem;
+}
+
+.services .box-container .box h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+    padding: 1.5rem;
+    background-color: var(--orange);
+    font-weight: normal;
+}
+
+.services .box-container .box p{
+    line-height: 2;
+    font-size: 1.7rem;
+
+}
+
+.services .box-container .box:hover{
+    background-color: var(--light-bg);
+}
+
+.services .box-container .box:hover i{
+    color: var(--black);
+}
+
+.services .box-container .box:hover p{
+    color: black;
+}
+
+/* Portfolio */
+
+.portfolio .container{
+    padding-top: 60px ;
+    padding-bottom: 70px;
+    text-align: left;
+}
+
+.tile{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.tile h2{
+    font-size: 60px;
+    color: var(--white);
+    font-weight: 700;
+    position: relative;
+}
+.tile h2::before{
+    text-align: left;
+    content: '';
+    height: 4px;
+    width: 80px;
+    background-color: var(--orange);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.tile h2::after{
+    content: '';
+    height: 4px;
+    width: 40px;
+    background-color: var(--orange) ;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
+.portfolio .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+    align-items: flex-start;
+
+}
+
+.portfolio .box-container .box img{
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.portfolio .box-container .box span{
+    font-size: 1.7rem;
+}
+
+.portfolio .box-container:hover .box{
+    opacity: .4;
+}
+
+.portfolio .box-container .box:hover{
+    opacity: 1;
+}
+
+
+
+/* Contact form */
+
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact form .box{
+    padding: 15px;
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 2rem;
+    text-transform: none;
+    border: var(--border-l);
+    margin: 1rem 0;
+    color: black;
+}
+
+
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+    color: black;
+}
+
+.contact form .flex{
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.message{
+    position: sticky;
+    top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    color: black;
+}
+
+.credit{
+    text-align: center;
+    background-color: var(--white);
+    padding: 3rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+
+.credit span{
+    color: var(--orange);
+}
+
+/* media queries */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    body.active{
+        padding-left: 0;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .header{
+        padding-top: 7rem;
+    } 
+    #menu-btn.fa-times{
+        right: 0;
+    }
+    .about .abt .about-txt h3{
+        font-size: 2rem;
+    }
+    .contact form .flex .box{
+        width: 100%;
+    }
+}
